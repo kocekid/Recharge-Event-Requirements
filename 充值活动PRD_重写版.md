@@ -844,10 +844,10 @@ flowchart TD
     I -->|operation 运营处理| L[生成待处理记录]
 
     J --> M{发放成功?}
-    M -->|是| N[状态→GRANTED，发通知]
+    M -->|是| N[状态→GRANTED，发送对应系统消息]
     M -->|否| O[状态→GRANT_FAILED，入补偿队列]
-    K --> P[状态→PENDING_MANUAL，发通知]
-    L --> Q[状态→PENDING_OPERATION，发通知]
+    K --> P[状态→PENDING_MANUAL，发送对应系统消息]
+    L --> Q[状态→PENDING_OPERATION，发送对应系统消息]
 ```
 
 #### 9.8.3 发奖规则说明
@@ -1202,7 +1202,7 @@ sequenceDiagram
     Reward->>Snapshot: 次日 01:00 读取快照
     Snapshot-->>Reward: 返回 Top1/Top2-3/Top4-8 名单
     Reward->>Reward: 自动奖励发放 / 人工权益生成资格
-    Reward->>Notify: 发送系统通知
+    Reward->>Notify: 根据奖励类型发送对应系统消息
     Reward->>Ops: 待处理权益进入后台
 ```
 
@@ -1867,6 +1867,45 @@ flowchart TD
 | 发放时间（granted_at） | datetime | 发放时间 |
 | expire_at | datetime | 过期时间 |
 | operator | string | 操作人 |
+| 系统消息状态（message_status） | enum | 未发送（pending）/已发送（sent）/发送失败（failed） |
+| 系统消息模板键（message_template_key） | string | 根据奖励类型取对应系统消息模板 |
+| 系统消息发送时间（message_sent_at） | datetime | 系统消息成功发送时间 |
+
+---
+
+## 20. 奖励发放系统消息
+
+### 20.1 触发规则
+
+| 触发场景 | 触发时机 | 接收用户 | 发送条件 | 发送失败处理 |
+|---|---|---|---|---|
+| 日充值奖励 | 日充值档位奖励自动下发成功后 | 达档用户 | 奖励发放状态（grant_status）更新为成功（success）或部分成功（partial_success） | 记录系统消息状态（message_status）为发送失败（failed），进入消息补偿队列，不重复发放奖励 |
+| 周充值奖励 | 周充值档位奖励自动下发成功后 | 达档用户 | 奖励发放状态（grant_status）更新为成功（success）或部分成功（partial_success） | 记录系统消息状态（message_status）为发送失败（failed），进入消息补偿队列，不重复发放奖励 |
+| 月充值奖励 | 月充值档位奖励自动下发成功后 | 达档用户 | 奖励发放状态（grant_status）更新为成功（success）或部分成功（partial_success） | 记录系统消息状态（message_status）为发送失败（failed），进入消息补偿队列，不重复发放奖励 |
+| 周排行奖励 | 周排行奖励自动下发成功后 | 获奖用户 | 奖励发放状态（grant_status）更新为成功（success）或部分成功（partial_success），且用户排名在奖励范围内 | 记录系统消息状态（message_status）为发送失败（failed），进入消息补偿队列，不重复发放奖励 |
+| 月排行奖励 | 月排行奖励自动下发成功后 | 获奖用户 | 奖励发放状态（grant_status）更新为成功（success）或部分成功（partial_success），且用户排名在奖励范围内 | 记录系统消息状态（message_status）为发送失败（failed），进入消息补偿队列，不重复发放奖励 |
+
+### 20.2 系统消息文案
+
+| 消息模板键（message_template_key） | 适用奖励 | 中文文案 | 变量 |
+|---|---|---|---|
+| recharge_activity_daily_tier_reward | 日充值奖励 | 恭喜你昨日充值达到奖励等级，其他奖励已自动发放，若有靓号奖励请联系管理领取。 | 无 |
+| recharge_activity_weekly_tier_reward | 周充值奖励 | 恭喜你本周充值达到奖励等级，奖励已发放，请查收。 | 无 |
+| recharge_activity_monthly_tier_reward | 月充值奖励 | 恭喜你本月充值达到奖励等级，其他奖励已自动发放，若有靓号奖励请联系管理领取。 | 无 |
+| recharge_activity_weekly_ranking_reward | 周排行奖励 | 恭喜您在充值活动获得上周第 # 名！奖励已发放，请查收。 | 排名（rank） |
+| recharge_activity_monthly_ranking_reward | 月排行奖励 | 恭喜您在充值活动获得上月第 # 名！奖励已发放，请查收。 | 排名（rank） |
+
+### 20.3 发送与幂等规则
+
+| 规则项 | 规则说明 |
+|---|---|
+| 发送通道 | 系统消息 |
+| 发送动作 | 奖励发放完成后调用系统消息服务发送 |
+| 消息幂等键 | 消息幂等键（message_idempotent_key）= 发放ID（grant_id）+ 消息模板键（message_template_key） |
+| 重试规则 | 系统消息发送失败只重试消息，不重试奖励发放 |
+| 人工权益说明 | 日充值奖励、月充值奖励若包含靓号等人工领取权益，系统消息只提示用户联系管理领取；人工领取状态仍以后台权益处理记录为准 |
+| 排名变量 | 周排行奖励、月排行奖励必须将排名（rank）替换到文案中的 # 位置 |
+| 多语言配置 | 多语言文案以翻译文档为准，系统消息模板键保持不变 |
 
 ---
 

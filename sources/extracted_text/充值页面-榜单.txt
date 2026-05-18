@@ -1,0 +1,75 @@
+
+
+===== 充值页面-榜单.pdf PAGE 1 =====
+金
+1
+排行榜页
+●页面结构
+○一级 Tab：Recharge Ranking（选
+中）
+○二级 Tab：Weekly Ranking / 
+Monthly Ranking（默认 Weekly）
+○倒计时：Countdown: {dd}D {hh}H 
+{mm}M {ss}S
+○倒计时结束时触发刷新：切换到新
+周期并清空上周期数据
+金
+2
+●排行奖励区
+○Weekly Ranking Reward / 
+Monthly Ranking Reward
+○展示“TOP 1”奖励
+○切换查看Top2-3、Top4-8奖励
+金
+3
+●榜单列表
+○展示{20}名用户
+○每行展示：头像、昵称
+■UI排序：前3，中间3个一排，一
+共5排，最下面2个
+○置底固定“我的排名条”
+■展示我的排名（未上榜则显示 
+20+）
+■展示我的累计充值值
+■右侧 Recharge 按钮跳转充值页
+展开全部
+批注
+评论
+版本记录
+展开
+1
+排行榜页
+●页面结构
+展开
+2
+●排行奖励区
+○Weekly Ranking 
+R
+d / M
+thl
+展开
+3
+●榜单列表
+○展示{20}名用户
+每行展示
+头像
+昵称
+导出
+画布（4）
+充值活动
+活动页面-首页
+充值页面-榜单
+充值页面-榜单历史
+充值档位
+页面
+图层
+stay项目组
+分享
+总览
+演示
+标注
+85%
+2026/5/8 15:06
+stay项目组
+https://modao.cc/proto/bUREjeQt8qxmejD76qixw/sharing?view_mode=read_only&screen=rbpV7mt6oefbBT4yp
+1/1

@@ -1,0 +1,227 @@
+[
+  {
+    "name": "01_首页_Daily充值奖励完整画板",
+    "source": "/Users/mac/Downloads/充值活动/_extracted_pdf_images/stay项目组_xref4.png",
+    "box": [
+      443,
+      3,
+      844,
+      1113
+    ],
+    "size": [
+      401,
+      1110
+    ],
+    "path": "/Users/mac/Downloads/充值活动/原型图页面切割输出_最终/01_首页_Daily充值奖励完整画板.png"
+  },
+  {
+    "name": "02_首页_Weekly充值奖励完整画板",
+    "source": "/Users/mac/Downloads/充值活动/_extracted_pdf_images/stay项目组_xref4.png",
+    "box": [
+      891,
+      31,
+      1291,
+      1113
+    ],
+    "size": [
+      400,
+      1082
+    ],
+    "path": "/Users/mac/Downloads/充值活动/原型图页面切割输出_最终/02_首页_Weekly充值奖励完整画板.png"
+  },
+  {
+    "name": "03_首页_Monthly充值奖励完整画板",
+    "source": "/Users/mac/Downloads/充值活动/_extracted_pdf_images/stay项目组_xref4.png",
+    "box": [
+      1326,
+      31,
+      1717,
+      1151
+    ],
+    "size": [
+      391,
+      1120
+    ],
+    "path": "/Users/mac/Downloads/充值活动/原型图页面切割输出_最终/03_首页_Monthly充值奖励完整画板.png"
+  },
+  {
+    "name": "04_Rule规则页完整画板",
+    "source": "/Users/mac/Downloads/充值活动/_extracted_pdf_images/stay项目组_xref4.png",
+    "box": [
+      1767,
+      79,
+      2137,
+      837
+    ],
+    "size": [
+      370,
+      758
+    ],
+    "path": "/Users/mac/Downloads/充值活动/原型图页面切割输出_最终/04_Rule规则页完整画板.png"
+  },
+  {
+    "name": "05_DailyProgress_12_5m弹窗",
+    "source": "/Users/mac/Downloads/充值活动/_extracted_pdf_images/stay项目组_xref4.png",
+    "box": [
+      86,
+      353,
+      440,
+      755
+    ],
+    "size": [
+      354,
+      402
+    ],
+    "path": "/Users/mac/Downloads/充值活动/原型图页面切割输出_最终/05_DailyProgress_12_5m弹窗.png"
+  },
+  {
+    "name": "06_DailyProgress_25m弹窗",
+    "source": "/Users/mac/Downloads/充值活动/_extracted_pdf_images/stay项目组_xref4.png",
+    "box": [
+      86,
+      754,
+      440,
+      1225
+    ],
+    "size": [
+      354,
+      471
+    ],
+    "path": "/Users/mac/Downloads/充值活动/原型图页面切割输出_最终/06_DailyProgress_25m弹窗.png"
+  },
+  {
+    "name": "07_DailyTop3奖励说明弹窗",
+    "source": "/Users/mac/Downloads/充值活动/_extracted_pdf_images/stay项目组_xref4.png",
+    "box": [
+      468,
+      524,
+      829,
+      752
+    ],
+    "size": [
+      361,
+      228
+    ],
+    "path": "/Users/mac/Downloads/充值活动/原型图页面切割输出_最终/07_DailyTop3奖励说明弹窗.png"
+  },
+  {
+    "name": "08_WeeklyProgress_125m弹窗",
+    "source": "/Users/mac/Downloads/充值活动/_extracted_pdf_images/stay项目组_xref4.png",
+    "box": [
+      907,
+      464,
+      1276,
+      926
+    ],
+    "size": [
+      369,
+      462
+    ],
+    "path": "/Users/mac/Downloads/充值活动/原型图页面切割输出_最终/08_WeeklyProgress_125m弹窗.png"
+  },
+  {
+    "name": "09_WeeklyTop3奖励说明弹窗",
+    "source": "/Users/mac/Downloads/充值活动/_extracted_pdf_images/stay项目组_xref4.png",
+    "box": [
+      472,
+      932,
+      821,
+      1108
+    ],
+    "size": [
+      349,
+      176
+    ],
+    "path": "/Users/mac/Downloads/充值活动/原型图页面切割输出_最终/09_WeeklyTop3奖励说明弹窗.png"
+  },
+  {
+    "name": "10_MonthlyProgress_300m弹窗",
+    "source": "/Users/mac/Downloads/充值活动/_extracted_pdf_images/stay项目组_xref4.png",
+    "box": [
+      1343,
+      464,
+      1712,
+      1146
+    ],
+    "size": [
+      369,
+      682
+    ],
+    "path": "/Users/mac/Downloads/充值活动/原型图页面切割输出_最终/10_MonthlyProgress_300m弹窗.png"
+  },
+  {
+    "name": "11_MonthlyTop3奖励说明弹窗",
+    "source": "/Users/mac/Downloads/充值活动/_extracted_pdf_images/stay项目组_xref4.png",
+    "box": [
+      917,
+      932,
+      1266,
+      1108
+    ],
+    "size": [
+      349,
+      176
+    ],
+    "path": "/Users/mac/Downloads/充值活动/原型图页面切割输出_最终/11_MonthlyTop3奖励说明弹窗.png"
+  },
+  {
+    "name": "12_充值页面_榜单完整原型图",
+    "source": "/Users/mac/Downloads/充值活动/_extracted_pdf_images/充值页面-榜单_xref4.png",
+    "box": [
+      0,
+      0,
+      604,
+      769
+    ],
+    "size": [
+      604,
+      769
+    ],
+    "path": "/Users/mac/Downloads/充值活动/原型图页面切割输出_最终/12_充值页面_榜单完整原型图.png"
+  },
+  {
+    "name": "13_充值页面_榜单历史完整原型图",
+    "source": "/Users/mac/Downloads/充值活动/_extracted_pdf_images/充值页面-榜单历史_xref4.png",
+    "box": [
+      0,
+      0,
+      513,
+      803
+    ],
+    "size": [
+      513,
+      803
+    ],
+    "path": "/Users/mac/Downloads/充值活动/原型图页面切割输出_最终/13_充值页面_榜单历史完整原型图.png"
+  },
+  {
+    "name": "14_充值档位配置表",
+    "source": "/Users/mac/Downloads/充值活动/_extracted_pdf_images/充值档位_xref4.png",
+    "box": [
+      0,
+      0,
+      502,
+      1060
+    ],
+    "size": [
+      502,
+      1060
+    ],
+    "path": "/Users/mac/Downloads/充值活动/原型图页面切割输出_最终/14_充值档位配置表.png"
+  },
+  {
+    "name": "15_充值奖励配置大表",
+    "source": "/Users/mac/Downloads/充值活动/_extracted_pdf_images/充值档位_xref6.png",
+    "box": [
+      0,
+      0,
+      2036,
+      1038
+    ],
+    "size": [
+      2036,
+      1038
+    ],
+    "path": "/Users/mac/Downloads/充值活动/原型图页面切割输出_最终/15_充值奖励配置大表.png"
+  }
+]
